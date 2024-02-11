@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Inventory Record</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        
+         <img src="PUPLogo.png" >
+        
+        <a href="#" class="logo">Individual Inventory Record Form</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#form">Form</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="intro">
+            <p> Polytechnic University of the Philippines, Sta. Mesa Manila</p>
+            <p2> GUIDANCE, COUNSELING AND TESTING SERVICES </p2>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="info">
+            <h2>About</h2>
+             <p>The Office of Guidance and Counseling at Polytechnic University of the Philippines, Sta. Mesa, Manila is dedicated to supporting the academic, personal, and professional growth of students through a variety of services including academic advising, career counseling, and personal counseling. It offers workshops, peer mentoring, and a resource library to enhance students' development and success, while promoting a respectful, inclusive environment.</p>
+            </div>
+
+    </section>
+
+    <section id="form">
+        <div class="form-buttons">
+            <button type="button" id="btnPersonalInfo">Personal Information</button>
+            <button type="button" id="btnEducationalBackground">Educational Background</button>
+            <button type="button" id="btnHomeFamBackground">Home and Family Background</button>
+            <button type="button" id="btnHealth">Health</button>
+        </div>
+
+
+    <form name="submit-to-google-sheet" class="#">
+
+        <div id="personalInfoForm" class="form-content" style="display: none;">
+            <h2>Personal Information</h2>
+               <p>Note: All items are required, put N/A if not applicable</p><br>
+            
+                    <label for="name">Name: (Surname, First Name)</label>
+                    <input type="text" id="name" name="Name" placeholder="Ex: Reyes, John"  required ><br>   
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="Age" required><br>
+                
+                    <label for="course">Course, Year and Section:</label>
+                    <input type="text" id="course" name="Course Year Section" placeholder="Ex: BSIT 3-1" required>
+                
+              
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="Sex">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                
+               
+                    <label for="civilStatus">Civil Status:</label>
+                    <select id="civilStatus" name="Civil Status">
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+               
+                
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="Date of Birth">
+                
+                    <label for="pob">Place of Birth:</label>
+                    <input type="text" id="pob" name="Place of Birth" placeholder="City, Country" >
+               
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="Address" placeholder="House no., Barangay, City">
+               
+                    <label for="email">Email address:</label>
+                    <input type="email" id="email" name="Email" placeholder="Ex: juanReyes@email.com">
+               
+                    <label for="mobileNo">Mobile Number:</label>
+                    <input type="tel" id="mobileNo" name="Mobile No." pattern="[0-9]{11}" placeholder="09XXXXXXXXX" maxlength="11" >
+
+                    <label for="hsAverage">High School General Average:</label>
+                    <input type="text" id="hsAverage" name="High School AVG" placeholder="00">
+                
+        </div>
+
+        <div id="EducationalbackgroundForm" class="form-content" style="display: none;">
+            <h2>Educational Background</h2>
+              <p>Note: Please put N/A if not applicable</p><br>
+
+                <div class="label">
+                     <label for="schoolGraduated">SCHOOL GRADUATED</label><br>
+                         <div class="input">
+                              <input type="text" id="schoolGradPreElem" name="School Grad PreElem"  placeholder="Pre-elementary" ><br>
+                              <input type="text" id="schoolGradElem" name="School Grad Elem"  placeholder="Elementary" required><br>
+                              <input type="text" id="schoolGradHighSchool" name="School Grad HighSchool"  placeholder="High School" required><br>
+                              <input type="text" id="schoolGradVocational" name="School Grad Vocational"  placeholder="Vocational" ><br>
+                              <input type="text" id="schoolGradCollege" name="School Grad College"  placeholder="College" ><br>
+                            </div>  
+                </div>
+              
+                <div class="label">
+                     <label for="schoolAddress">SCHOOL ADDRESS</label><br>
+                         <div class="input">
+                              <input type="text" id="schoolAddPreElem" name="School Address PreElem" placeholder="Pre-elementary"><br>
+                              <input type="text" id="schoolAddElem" name="School Address Elem" placeholder="Elementary" required><br>
+                              <input type="text" id="schoolAddHighSchool" name="School Address HighSchool" placeholder="High School" required><br>
+                              <input type="text" id="schoolAddVocational" name="School Address Vocational" placeholder="Vocational" ><br>
+                              <input type="text" id="schoolAddCollege" name="School Address College" placeholder="College" ><br>
+                         </div>
+                </div>
+
+              <div class="label">
+                    <label for="publicOrPrivate">PUBLIC/PRIVATE</label><br>
+                         <div class="input">
+                              <input type="text" id="publicPrivPreElem" name="Public/Priv PreElem" placeholder="Pre-elementary" ><br>
+                              <input type="text" id="publicPrivElem" name="Public/Priv Elem"  placeholder="Elementary" required><br>
+                              <input type="text" id="publicPrivHighSchool" name="Public/Priv HighSchool"  placeholder="High School" required><br>
+                              <input type="text" id="publicPrivVocational" name="Public/Priv Vocational"  placeholder="Vocational" ><br>
+                              <input type="text" id="publicPrivCollege" name="Public/Priv College"  placeholder="College"><br>
+                         </div>  
+              </div>
+              
+               <div class="label">
+                    <label for="dateAttended">DATE ATTENDED</label><br>
+                         <div class="input">
+                              <input type="text" id="dateAttendedPreElem" name="Date Attended PreElem" placeholder="Pre-elementary" ><br>
+                              <input type="text" id="dateAttendedElem" name="Date Attended Elem" placeholder="Elementary" required><br>
+                              <input type="text" id="dateAttendedHighSchool" name="Date Attended HighSchool"  placeholder="High School" required><br>
+                              <input type="text" id="dateAttendedVocational" name="Date Attended Vocational"  placeholder="Vocational" ><br>
+                              <input type="text" id="dateAttendedCollege" name="Date Attended College" placeholder="College" ><br>                             
+                         </div>
+               </div>
+
+               <div class="label">
+                    <label for="honorsReceived">HONORS RECEIVED</label><br>
+                         <div class="input">
+                             <input type="text" id="honorsReceivedPreElem" name="Honors Received PreElem" placeholder="Pre-elementary"><br>
+                             <input type="text" id="honorsReceivedElem" name="Honors Received Elem" placeholder="Elementary" required ><br>
+                             <input type="text" id="honorsReceivedHighSchool" name="Honors Received HighSchool" placeholder="High School" required ><br>
+                             <input type="text" id="honorsReceivedVocational" name="Honors Received Vocational" placeholder="Vocational"><br>
+                             <input type="text" id="honorsReceivedCollege" name="Honors Received College" placeholder="College" ><br>   
+                         </div>  
+               </div>
+               
+               <div class="natureOfSchooling">
+                    <p>Nature of Schooling</p>
+                        <input type="radio" id="continuous" name="Schooling Opt" value="Continuous">
+                        <label for="continuous">Continuous</label> 
+                        <input type="radio" id="interrupted" name="Schooling Opt" value="Interrupted">
+                        <label for="interrupted">Interrupted</label> 
+               </div>
+
+             
+                      <label for="reasonSchooling"> If interrupted, please state reason:</label>
+                      <input type="text" id="reasonSchooling" name="Reason For Schooling">
+            
+        </div>
+
+        <div id="HomeandFamForm" class="form-content" style="display: none;">
+            <h2>Home and Family Background</h2>
+               <p>Note: Not required and answering is optional</p><br>
+           
+                <!-- Father's Information -->
+                <h3>Father's Information</h3>
+                <div>
+                    <label for="fatherName">Name of Father:</label>
+                    <input type="text" id="fatherName" name="Father Name">
+                </div>
+                <div>
+                    <label for="fatherAge">Age:</label>
+                    <input type="number" id="fatherAge" name="Father Age">
+                </div>
+                <div>
+                    <label for="fatherEducAttainment">Educational Attainment:</label>
+                    <input type="text" id="fatherEducAttainment" name="Father EducAttainment">
+                </div>
+                <div>
+                    <label for="fatherOccupation">Occupation:</label>
+                    <input type="text" id="fatherOccupation" name="Father Occupation">
+                </div>
+                <div>
+                    <label for="fatherEmployerName">Name of Employer:</label>
+                    <input type="text" id="fatherEmployerName" name="Father EmployerName">
+                </div>
+                <div>
+                    <label for="fatherEmployerAddress">Address of Employer:</label>
+                    <input type="text" id="fatherEmployerAddress" name="Father EmployerAddress">
+                </div>
+        
+                <!-- Mother's Information -->
+                <h3>Mother's Information</h3>
+                <div>
+                    <label for="motherName">Name of Mother:</label>
+                    <input type="text" id="motherName" name="Mother Name">
+                </div>
+                <div>
+                    <label for="motherAge">Age:</label>
+                    <input type="number" id="motherAge" name="Mother Age">
+                </div>
+                <div>
+                    <label for="motherEducAttainment">Educational Attainment:</label>
+                    <input type="text" id="motherEducAttainment" name="Mother EducAttainment">
+                </div>
+                <div>
+                    <label for="motherOccupation">Occupation:</label>
+                    <input type="text" id="motherOccupation" name="Mother Occupation">
+                </div>
+                <div>
+                    <label for="motherEmployerName">Name of Employer:</label>
+                    <input type="text" id="motherEmployerName" name="Mother EmployerName">
+                </div>
+                <div>
+                    <label for="motherEmployerAddress">Address of Employer:</label>
+                    <input type="text" id="motherEmployerAddress" name="Mother EmployerAddress">
+                </div>
+        
+                <!-- Guardian's Information (if applicable) -->
+                <h3>Guardian's Information</h3>
+                <div>
+                    <label for="guardianName">Name of Guardian:</label>
+                    <input type="text" id="guardianName" name="Guardian Name">
+                </div>
+                <div>
+                    <label for="guardianRelation">Relation:</label>
+                    <input type="text" id="guardianRelation" name="Guardian Relation">
+                </div>
+                <div>
+                    <label for="guardianEducAttainment">Educational Attainment:</label>
+                    <input type="text" id="guardianEducAttainment" name="Guardian EducAttainment">
+                </div>
+                <div>
+                    <label for="guardianOccupation">Occupation:</label>
+                    <input type="text" id="guardianOccupation" name="Guardian Occupation">
+                </div>
+                <div>
+                    <label for="guardianEmployerName">Name of Employer:</label>
+                    <input type="text" id="guardianEmployerName" name="Guardian EmployerName">
+                </div>
+                <div>
+                    <label for="guardianEmployerAddress">Address of Employer:</label>
+                    <input type="text" id="guardianEmployerAddress" name="Guardian EmployerAddress">
+                </div>
+        </div>
+
+        <div id="HealthForm" class="form-content" style="display: none;">
+            <h2>Health Information</h2>
+                 <p>Note: All items are required, put N/A if not applicable</p><br>
+            
+                <h3>A. Physical</h3>
+                <p>Do you have problems with (Please choose)</p>
+                <div>
+                    Your Vision:
+                    <label for="Yes">
+                        <input type="radio" id="Yes" name="Vision" value="Yes"> Yes
+                    </label>
+                    
+                    <label for="No">
+                        <input type="radio" id="No" name="Vision" value="No"> No   
+                    </label>
+                    If yes, please specify: <input type="text" name="Vision Specify" required>
+                </div>
+                
+                <div>
+                    Your Hearing:
+                    <label for="Yes">
+                        <input type="radio" id="Yes" name="Hearing" value="Yes"> Yes
+                    </label>
+                    
+                    <label for="No">
+                        <input type="radio" id="No" name="Hearing" value="No"> No   
+                    </label>
+                    If yes, please specify: <input type="text" name="Hearing Specify" required>
+                </div>
+
+                <div>
+                    Your Speech:
+                    <label for="Yes">
+                        <input type="radio" id="Yes" name="Speech" value="Yes"> Yes
+                    </label>
+                    
+                    <label for="No">
+                        <input type="radio" id="No" name="Speech" value="No"> No   
+                    </label>
+                    If yes, please specify: <input type="text" name="Speech Specify" required>
+                </div>
+                <div>
+                    Your General Heealth:
+                    <label for="Yes">
+                        <input type="radio" id="Yes" name="General Health" value="Yes"> Yes
+                    </label>
+                    
+                    <label for="No">
+                        <input type="radio" id="No" name="General Health" value="No"> No   
+                    </label>
+                    If yes, please specify: <input type="text" name="GeneralHealth Specify" required>
+                </div>
+                
+                <h3>B. Psychological</h3>
+                <table>
+                    <tr>
+                        <th>Consulted</th>
+                        <th>Yes</th>
+                        <th>No</th>
+                        <th>When</th>
+                        <th>For What?</th>
+                    </tr>
+                    <tr>
+                        <td>Psychiatrist</td>
+                        <td><input type="radio" name="Psychiatrist" value="Yes"></td>
+                        <td><input type="radio" name="Psychiatrist" value="No"> </td>
+                        <td><input type="text" name="Psychiatrist When" required></td>
+                        <td><input type="text" name="Psychiatrist For What" required></td>
+                    </tr>
+                    <tr>
+                        <td>Psychologist</td>
+                        <td><input type="radio" name="Psychologist" value="Yes"></td>
+                        <td><input type="radio" name="Psychologist" value="No"></td>
+                        <td><input type="text" name="Psychologist When" required></td>
+                        <td><input type="text" name="Psychologist For What" required></td>
+                    </tr>
+                    <tr>
+                        <td>Counselor</td>
+                        <td><input type="radio" name="Counselor" value="Yes"></td>
+                        <td><input type="radio" name="Counselor" value="No"></td>
+                        <td><input type="text" name="Counselor When" required></td>
+                        <td><input type="text" name="Counselor For What" required></td>
+                    </tr>
+                </table>
+          
+         </div>
+              <input type="submit">
+      </form>
+           <div class="note">
+                <p>A message will appear once successfully submitted; otherwise, please check if all required items are answered.</p>
+           </div>
+    </section>
+
+    <section id="contact">
+         <div class="socials"> 
+             <a href="https://www.facebook.com/PUPGuidanceOfficial/" target="_blank">PUP GUIDANCE Official Facebook</a>
+             <p>www.guidance@pup.edu.ph</p>
+
+             </div>
+          
+         </div>
+
+
+    </section>
+
+    <script src="code.js"></script>
+
+</body>
+</html>
